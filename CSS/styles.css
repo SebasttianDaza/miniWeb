@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --color-main : rgb(214, 211, 26);
+    --font-family:'IBM Plex Sans Thai Looped',
+    sans-serif;
+}
+
+html, body {
+    width: 100%;
+    font-family: var(--font-family);
+    scroll-behavior: smooth;
+}
+
+/* Content Navegation */
+
+#navegation {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    height: 15vh;
+    background-color: var(--color-main);
+    border-bottom: 1px solid rgb(32, 32, 3);
+}
+
+/* Title principal */
+
+#navegation h1 {
+    font-size: 2rem;
+    color: rgb(32, 32, 3);
+    width: 100%;
+    text-align: center;
+}
+
+/* Efect menu */
+
+ul.show {
+    left: 0;
+    transition: 1s;
+    opacity: 1;
+}
+
+/* Menu */
+
+.list {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    left: -100vw;
+    top: 0;
+    opacity: 0;
+    background-color: rgba(32, 32, 3, 0.623);
+    transition: opacity 1s;
+}
+
+.list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.list li:hover {
+    background-color: var(--color-main);
+    color: rgb(32, 32, 3);
+    transition: background-color 1s;
+}
+
+.list li a {
+    text-decoration: none;
+    color: rgb(32, 32, 3);
+}
+
+/* Icon */
+
+#btn {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 2;
+    background-color: var(--color-main);
+    border-radius: 70%;
+    border: 1px solid rgb(32, 32, 3);
+}
+
+.tam {
+    max-width: 100%;
+    height: 85vh;
+}
+
+.tam h2 {
+    max-width: 100%;
+    text-align: center;
+}
