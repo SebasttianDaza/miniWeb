@@ -3,14 +3,19 @@
     margin: 0;
     box-sizing: border-box;
     --color-main : rgb(214, 211, 26);
+    --color-menu: #2d2300;
+    --color-secondary: #302D00;
     --font-family:'IBM Plex Sans Thai Looped',
     sans-serif;
+    --color-text: #fff;
 }
 
 html, body {
     width: 100%;
     font-family: var(--font-family);
     scroll-behavior: smooth;
+    background-image: linear-gradient(to left, #d6d31a, #c3c215, #b1b110, #9fa00a, #8d9005, #7f8204, #717403, #646602, #575703, #494804, #3c3a03, #302d00);
+    
 }
 
 img {
@@ -25,8 +30,8 @@ img {
     align-items: center;
     max-width: 100%;
     height: 10vh;
-    background-color: var(--color-main);
-    border-bottom: 1px solid rgb(32, 32, 3);
+    background-color: var(--color-menu);
+    border-bottom: 1px solid rgb(12, 12, 10);
     position: sticky;
     top: 0;
 }
@@ -35,7 +40,7 @@ img {
 
 #navegation h1 {
     font-size: 2rem;
-    color: rgb(32, 32, 3);
+    color: var(--color-text);
     width: 100%;
     text-align: center;
 }
@@ -56,10 +61,10 @@ ul.is-actives {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    z-index: 1;
+    z-index: 998;
     bottom: 0;
     top: 0;
-    background-color: rgba(32, 32, 3, 0.623);
+    background-color: var(--color-menu);
     transition: transform 0.5s ease-in-out;
     transform: translate(-100%, 0);
 }
@@ -74,6 +79,7 @@ ul.is-actives {
     font-size: 1.5rem;
     text-transform: uppercase;
     cursor: pointer;
+    
 }
 
 .list li:hover {
@@ -81,11 +87,12 @@ ul.is-actives {
     color: rgb(32, 32, 3);
     transition: background-color 1s ease;
     transform: scale(1.1);
+    color: rgb(32, 32, 3);
 }
 
 .list li a {
     text-decoration: none;
-    color: rgb(32, 32, 3);
+    color: rgb(255, 255, 255);
 }
 
 /* Icon */
@@ -94,18 +101,56 @@ ul.is-actives {
     position: fixed;
     bottom: 1.5rem;
     right: 1.5rem;
-    z-index: 2;
+    z-index: 999;
     background-color: var(--color-main);
     border-radius: 70%;
     border: 1px solid rgb(32, 32, 3);
 }
 
 .tam {
-    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+    margin: 0 auto;
     height: 90vh;
+    z-index: 0;
+    color: var(--color-text);
 }
 
 .tam h2 {
     max-width: 100%;
     text-align: center;
+    height: 20%;
+}
+
+/* Section 1 */
+
+#first {
+    justify-content: space-evenly;
+}
+
+.alarmaRelog {
+    display: grid;
+    width: 100%;
+    height: 30%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.alarmaRelog div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: .3rem;
+    background-color: var(--color-secondary);
+
+    
 }
