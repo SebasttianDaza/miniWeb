@@ -2,9 +2,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    --color-main : rgb(214, 211, 26);
-    --color-menu: #2d2300;
-    --color-secondary: #302D00;
+    --color-main : #AC501F;
+    --color-menu: #4C3949;
+    --color-secondary: #AC501F;
     --font-family:'IBM Plex Sans Thai Looped',
     sans-serif;
     --color-text: #fff;
@@ -14,7 +14,7 @@ html, body {
     width: 100%;
     font-family: var(--font-family);
     scroll-behavior: smooth;
-    background-image: linear-gradient(to left, #d6d31a, #c3c215, #b1b110, #9fa00a, #8d9005, #7f8204, #717403, #646602, #575703, #494804, #3c3a03, #302d00);
+    background-color: #1A1A1A;
     
 }
 
@@ -30,10 +30,11 @@ img {
     align-items: center;
     max-width: 100%;
     height: 10vh;
-    background-color: var(--color-menu);
-    border-bottom: 1px solid rgb(12, 12, 10);
+    background-color: transparent;
+    border-bottom: 1px solid var(--color-secondary);
     position: sticky;
     top: 0;
+    z-index: 997;
 }
 
 /* Title principal */
@@ -134,23 +135,35 @@ ul.is-actives {
 .alarmaRelog {
     display: grid;
     width: 100%;
-    height: 30%;
+    height: 60%;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 2rem;
     align-items: center;
     justify-items: center;
 }
 
-.alarmaRelog div {
+.elements {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 14rem;
     text-align: center;
     border-radius: .3rem;
-    background-color: var(--color-secondary);
+    background-color: #333333;
+}
 
-    
+
+
+.btn {
+    width:6rem;
+    height:2.5rem;
+    border: 1px solid black;
+    border-radius: .3rem;
+    padding: .3rem;
+    font-size: .9rem;
+    cursor: pointer;
+    background-color: var(--color-main);
+    color: var(--color-text);
 }
