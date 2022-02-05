@@ -1,8 +1,9 @@
 import { changeMainStyle, changeMainStyleLink } from './btnhamburger.js';
-import { startAlarm } from './relog-digital.js';
+import { startRelog, stopRelog, startAlarm, stopAlarm } from './relog-digital.js';
 
 export const btn = document.getElementById("btn");
 export const list = document.getElementById("menu");
+const div = document.querySelector(".hour");
 
 document.addEventListener("click", (e) => {
     // Event the main button
@@ -13,7 +14,15 @@ document.addEventListener("click", (e) => {
         changeMainStyleLink();
     }
     if (e.target.matches("#start")) {
-        const div = document.querySelector(".hour");
-        startAlarm(div);
+        startRelog(div);
+    }
+    if (e.target.matches("#stop")) {
+        stopRelog(div);
+    }
+    if (e.target.matches("#startAlarm")) {
+        startAlarm();
+    }
+    if (e.target.matches("#stopAlarm")) {
+        stopAlarm();
     }
 })
