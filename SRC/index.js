@@ -1,5 +1,6 @@
 import { changeMainStyle, changeMainStyleLink } from './btnhamburger.js';
 import { startRelog, stopRelog, startAlarm, stopAlarm } from './relog-digital.js';
+import { startKeyBoard } from './keyBoard.js';
 
 export const btn = document.getElementById("btn");
 export const list = document.getElementById("menu");
@@ -24,5 +25,8 @@ document.addEventListener("click", (e) => {
     }
     if (e.target.matches("#stopAlarm")) {
         stopAlarm();
+    }
+    if (e.target.matches("#startKeyBoard")) {
+        startKeyBoard();
     }
 })
