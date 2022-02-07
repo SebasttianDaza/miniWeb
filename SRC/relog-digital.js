@@ -1,7 +1,9 @@
  
 // Function for relog
-export  function startRelog (div) {
+export  function startRelog (div, e) {
     interval(div);
+    e.target.disabled = true;
+    e.target.innerHTML = "Relogando...";
 }
 
 let valorInterval;
@@ -9,7 +11,7 @@ let valorInterval;
 const interval = (div) => {
     valorInterval = setInterval(() => {
         const date = new Date();
-
+        
         const template = `<p id="toLocal">${date.toLocaleString("en-US")}</p>`;
         div.innerHTML = template;
         div.classList.toggle("date");
@@ -17,10 +19,12 @@ const interval = (div) => {
     }, 1000);
     
 }
-
- export function stopRelog (div) {
+ 
+export function stopRelog (div) {
     clearInterval(valorInterval);
     div.innerHTML = "";
+    document.getElementById("start").disabled = false;
+    document.getElementById("start").innerHTML = "Start Relog";
 }   
 
 //Function for alarm

@@ -14,13 +14,13 @@ document.addEventListener("click", (e) => {
         changeMainStyleLink();
     }
     if (e.target.matches("#start")) {
-        startRelog(div);
+        startRelog(div, e);
     }
     if (e.target.matches("#stop")) {
         stopRelog(div);
     }
     if (e.target.matches("#startAlarm")) {
-        startAlarm();
+        startAlarm(e);
     }
     if (e.target.matches("#stopAlarm")) {
         stopAlarm();
