@@ -5,6 +5,7 @@ import { startKeyBoard } from './keyBoard.js';
 export const btn = document.getElementById("btn");
 export const list = document.getElementById("menu");
 const div = document.querySelector(".hour");
+const DOM = document;
 
 document.addEventListener("click", (e) => {
     // Event the main button
@@ -29,4 +30,8 @@ document.addEventListener("click", (e) => {
     if (e.target.matches("#startKeyBoard")) {
         startKeyBoard();
     }
+})
+
+DOM.addEventListener("keydown", (e) => {
+    console.log(e.keyCode);
 })
