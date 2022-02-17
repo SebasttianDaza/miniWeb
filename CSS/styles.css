@@ -194,14 +194,19 @@ div.date  {
     height: 70%;
     background-color: var(--color-secondary);
     width: 80%;
-    border: 1px solid white;
     border-radius: .5rem;
 }
 
-#background div {
+div.hoverHere {
+    border: 1px solid white;
+}
+
+.bull {
+    display: flex;
     background-color: var(--color-menu);
     width: 40px;
     height: 45px;
     border-radius: 50%;
     max-width: 100%;
+    max-height: 100%;
 }

@@ -2,10 +2,11 @@ import { changeMainStyle, changeMainStyleLink } from './btnhamburger.js';
 import { startRelog, stopRelog, startAlarm, stopAlarm } from './relog-digital.js';
 import { startKeyBoard } from './keyBoard.js';
 
-export const btn = document.getElementById("btn");
-export const list = document.getElementById("menu");
+
+const btn = document.getElementById("btn");
+const list = document.getElementById("menu");
 const div = document.querySelector(".hour");
-const DOM = document;
+
 
 document.addEventListener("click", (e) => {
     // Event the main button
@@ -27,11 +28,9 @@ document.addEventListener("click", (e) => {
     if (e.target.matches("#stopAlarm")) {
         stopAlarm();
     }
-    if (e.target.matches("#startKeyBoard")) {
-        startKeyBoard();
+    if (e.target.matches("#background")) {
+      startKeyBoard(e);
     }
 })
 
-DOM.addEventListener("keydown", (e) => {
-    console.log(e.keyCode);
-})
+export { btn, list };
