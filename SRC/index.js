@@ -1,6 +1,6 @@
 import { changeMainStyle, changeMainStyleLink } from './btnhamburger.js';
 import { startRelog, stopRelog, startAlarm, stopAlarm } from './relog-digital.js';
-import { startKeyBoard } from './keyBoard.js';
+import { startKeyBoard, shortcut } from './keyBoard.js';
 
 
 const btn = document.getElementById("btn");
@@ -28,9 +28,16 @@ document.addEventListener("click", (e) => {
     if (e.target.matches("#stopAlarm")) {
         stopAlarm();
     }
-    if (e.target.matches("#background")) {
-      startKeyBoard(e);
-    }
 })
+
+document.addEventListener("keydown", (e) => {
+    shortcut(e);
+    startKeyBoard(
+      e,
+      document.getElementById("background"),
+      document.querySelector("#elementBall")
+    );
+})
+
 
 export { btn, list };

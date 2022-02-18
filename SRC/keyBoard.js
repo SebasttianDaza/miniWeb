@@ -1,55 +1,49 @@
 import { changeMainStyle } from './btnhamburger.js';
 
+let x = 0,
+  y = 0;
+
+export function startKeyBoard (e, game,  elementBall) {
+
+  const { left, right, top, bottom } = elementBall.getBoundingClientRect();
+  const limitGame = game.getBoundingClientRect();
 
 
-document.addEventListener("keydown", (e) => {
+  switch (e.keyCode) {
+    case 37:
+      if (left > limitGame.left) x--;
+      break;
+    case 38:
+      if (top > limitGame.top) {
+        e.preventDefault();
+        y--;
+      };
+      break;
+    case 39:
+      if (right < limitGame.right) x++;
+      break;
+    case 40:
+      if (bottom < limitGame.bottom) {
+        y++;
+         e.preventDefault();
+      };
+      break;
+  }
+  
+  elementBall.style.transform = `translate(${x * 10}px, ${y * 10}px)`;
 
-    if (e.key === "Control") {
-        changeName();
-    }
-    if (e.key === "v") {
-        changeMainStyle();
-    }
-    if (e.altKey && e.key === "z") {
-        alert("Hola mundo");
-    }
-});
-
-export function startKeyBoard (e) {
-    const game = document.getElementById("background")
-    game.classList.toggle("hoverHere");
-    game.focus();
-    moveBall();
 }
 
-const moveBall = () => {
-    let counterBottomTop, counterLeftRight = 0;
-    document.addEventListener("keydown", (e) => {
-        if (e.keyCode === 38) {
-          counterBottomTop--;
-          document.getElementById(
-            "elementBall"
-          ).style.marginTop = `${counterBottomTop}px`;
-        }
-        if (e.keyCode === 40) {
-            counterBottomTop++;
-            document.getElementById(
-              "elementBall"
-            ).style.marginTop = `${counterBottomTop}px`;
-        }
-        if (e.keyCode === 37) {
-            counterLeftRight--;
-            document.getElementById(
-              "elementBall"
-            ).style.marginLeft = `${counterLeftRight}px`;
-        }
-        if (e.keyCode === 39) {
-          counterLeftRight++;
-          document.getElementById(
-            "elementBall"
-          ).style.marginLeft = `${counterLeftRight}px`;
-        }
-    })
+export const shortcut = (e) => {
+  if (e.key === "Control") {
+    changeName();
+  }
+  if (e.key === "v") {
+    changeMainStyle();
+  }
+  if (e.altKey && e.key === "z") {
+    alert("Hola mundo");
+  }
 }
 
 
