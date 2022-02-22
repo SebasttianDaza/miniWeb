@@ -1,6 +1,7 @@
 import { changeMainStyle, changeMainStyleLink } from './btnhamburger.js';
 import { startRelog, stopRelog, startAlarm, stopAlarm } from './relog-digital.js';
 import { startKeyBoard, shortcut } from './keyBoard.js';
+import { countDown } from "./coutdown.js";
 
 
 const btn = document.getElementById("btn");
@@ -38,6 +39,8 @@ document.addEventListener("keydown", (e) => {
       document.querySelector("#elementBall")
     );
 })
+
+countDown(new Date(2043, 0, 1));
 
 
 export { btn, list };
