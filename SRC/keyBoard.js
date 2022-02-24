@@ -44,7 +44,7 @@ const numberEnter = (element) => {
 }
 
 export const shortcut = (e) => {
-  if (e.key === "Control") {
+  if (e.key === "Shift") {
     changeName();
   }
   if (e.key === "v") {

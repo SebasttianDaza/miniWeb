@@ -37,6 +37,13 @@ document.addEventListener("click", (e) => {
             e
         );
     }
+    if (e.target.matches("#btnCountDown")) {
+        const value = document.getElementById("Date").value;
+        countDown(
+            new Date(value),
+            document.getElementById("countDown")
+        );
+    }
 
 })
 
@@ -49,7 +56,7 @@ document.addEventListener("keydown", (e) => {
     );
 })
 
-countDown(new Date(2043, 0, 1));
+
 
 
 export { btn, list };
