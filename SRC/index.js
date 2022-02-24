@@ -29,6 +29,15 @@ document.addEventListener("click", (e) => {
     if (e.target.matches("#stopAlarm")) {
         stopAlarm();
     }
+    if(e.target.matches("#btnCountDown")) {
+        
+        countDown(
+            document.getElementById("Date").value,
+            document.getElementById("form"),
+            e
+        );
+    }
+
 })
 
 document.addEventListener("keydown", (e) => {

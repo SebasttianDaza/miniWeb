@@ -5,25 +5,25 @@ let x = 0,
 
 export function startKeyBoard (e, game,  elementBall) {
 
-  const { left, right, top, bottom } = elementBall.getBoundingClientRect();
-  const limitGame = game.getBoundingClientRect();
+  const { left, right, top, bottom } = numberEnter(elementBall);
+  
 
-
+  //No olvidar hacer las function with Math.floor and Math.round
   switch (e.keyCode) {
     case 37:
-      if (left > limitGame.left) x--;
+      if (left > numberEnter(game).left) x--;
       break;
     case 38:
-      if (top > limitGame.top) {
+      if (top > numberEnter(game).top) {
         e.preventDefault();
         y--;
       };
       break;
     case 39:
-      if (right < limitGame.right) x++;
+      if (right < numberEnter(game).right) x++;
       break;
     case 40:
-      if (bottom < limitGame.bottom) {
+      if (bottom < numberEnter(game).bottom) {
         y++;
          e.preventDefault();
       };
@@ -32,6 +32,15 @@ export function startKeyBoard (e, game,  elementBall) {
   
   elementBall.style.transform = `translate(${x * 10}px, ${y * 10}px)`;
 
+}
+
+const numberEnter = (element) => {
+  const { left, right, top, bottom } = element.getBoundingClientRect();
+  Math.round(left);
+  Math.round(right);
+  Math.round(top);
+  Math.round(bottom);
+  return { left, right, top, bottom };
 }
 
 export const shortcut = (e) => {
