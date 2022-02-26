@@ -34,7 +34,7 @@ export function startKeyBoard (e, game,  elementBall) {
 
 }
 
-const numberEnter = (element) => {
+export const numberEnter = (element) => {
   const { left, right, top, bottom } = element.getBoundingClientRect();
   Math.round(left);
   Math.round(right);

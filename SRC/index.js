@@ -2,7 +2,7 @@ import { changeMainStyle, changeMainStyleLink } from './btnhamburger.js';
 import { startRelog, stopRelog, startAlarm, stopAlarm } from './relog-digital.js';
 import { startKeyBoard, shortcut } from './keyBoard.js';
 import { countDown } from "./coutdown.js";
-
+import { stylesDown } from './updown.js';
 
 const btn = document.getElementById("btn");
 const list = document.getElementById("menu");
@@ -56,7 +56,7 @@ document.addEventListener("keydown", (e) => {
     );
 })
 
-
+stylesDown();
 
 
 export { btn, list };
