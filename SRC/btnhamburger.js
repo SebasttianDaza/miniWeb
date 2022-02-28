@@ -1,16 +1,13 @@
 
 import { btn, list } from "./index.js";
+import { changeClassList, removeClassList } from "./changeStyle.js";
 
 export function changeMainStyle (e) {
-
-    btn.classList.toggle("is-active");
-    list.classList.toggle("is-actives");
-
+    changeClassList(btn, "is-active");
+    changeClassList(list, "is-actives");
 }
 
 export function changeMainStyleLink (e) {
-
-    btn.classList.remove("is-active");
-    list.classList.remove("is-actives");
-
+    removeClassList(btn, "is-active");
+    removeClassList(list, "is-actives");
 }

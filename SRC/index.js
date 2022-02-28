@@ -56,7 +56,9 @@ document.addEventListener("keydown", (e) => {
     );
 })
 
-stylesDown();
+document.addEventListener("DOMContentLoaded", (e) => {
+    stylesDown();
+})
 
 
 export { btn, list };
