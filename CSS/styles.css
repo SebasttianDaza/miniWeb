@@ -1,20 +1,25 @@
+:root {
+    --color-main : #AC501F;
+    --color-menu: #4C3949;
+    --color-secondary: #AC501F;
+    --background-body: #1A1A1A;
+    --font-family:'IBM Plex Sans Thai Looped',
+    sans-serif;
+    --color-text: #fff;
+}
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    --color-main : #AC501F;
-    --color-menu: #4C3949;
-    --color-secondary: #AC501F;
-    --font-family:'IBM Plex Sans Thai Looped',
-    sans-serif;
-    --color-text: #fff;
 }
 
 html, body {
     width: 100%;
     font-family: var(--font-family);
     scroll-behavior: smooth;
-    background-color: #1A1A1A;
+    background-color: var(--background-body);
     
 }
 
@@ -196,7 +201,6 @@ div.date  {
     width: 80%;
     border-radius: .5rem;
     border: 1px solid white;
-    
 }
   
 
@@ -264,4 +268,6 @@ div.date  {
         font-size: 1.5rem;
     }
 }
+
+
     

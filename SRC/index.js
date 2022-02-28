@@ -3,6 +3,7 @@ import { startRelog, stopRelog, startAlarm, stopAlarm } from './relog-digital.js
 import { startKeyBoard, shortcut } from './keyBoard.js';
 import { countDown } from "./coutdown.js";
 import { stylesDown } from './updown.js';
+import { identifyTheme } from './theme.js';
 
 const btn = document.getElementById("btn");
 const list = document.getElementById("menu");
@@ -44,6 +45,9 @@ document.addEventListener("click", (e) => {
             document.getElementById("countDown")
         );
     }
+    if (e.target.matches("#btnTheme")) {
+        identifyTheme();
+    }
 
 })
 
@@ -58,6 +62,7 @@ document.addEventListener("keydown", (e) => {
 
 document.addEventListener("DOMContentLoaded", (e) => {
     stylesDown();
+    identifyTheme();
 })
 
 
