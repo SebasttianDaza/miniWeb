@@ -6,6 +6,12 @@
     --font-family:'IBM Plex Sans Thai Looped',
     sans-serif;
     --color-text: #fff;
+
+
+    /* Theme Light */
+
+    --background-body-light: #fcf9ee;
+    --color-text-light: #141414;
 }
 
 
@@ -19,8 +25,23 @@ html, body {
     width: 100%;
     font-family: var(--font-family);
     scroll-behavior: smooth;
+    color: var(--color-text);
+}
+
+body.dark-theme {
     background-color: var(--background-body);
-    
+    color: var(--color-text);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--background-body);
+    }
+
+    body.light-theme {
+        background-color: var(--background-body-light);
+        color: var(--color-text-light);
+    }
 }
 
 img {
@@ -46,7 +67,6 @@ img {
 
 #navegation h1 {
     font-size: 2rem;
-    color: var(--color-text);
     width: 100%;
     text-align: center;
 }
@@ -93,7 +113,6 @@ ul.is-actives {
     color: rgb(32, 32, 3);
     transition: background-color 1s ease;
     transform: scale(1.1);
-    color: rgb(32, 32, 3);
 }
 
 .list li a {
@@ -177,14 +196,12 @@ ul.is-actives {
     font-size: .9rem;
     cursor: pointer;
     background-color: var(--color-main);
-    color: var(--color-text);
 }
 
 
 
 #toLocal {
     font: 1rem var(--font-family);
-    color: var(--color-text);
     margin: .3rem;
 }
 
@@ -213,6 +230,7 @@ div.date  {
     border-radius: 50%;
     margin: .5rem;
 }  
+
 
 
 .down {
@@ -257,6 +275,26 @@ div.date  {
     transition: opacity 0.5s ease-in-out;
 }
 
+.theme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    background-color: var(--color-main);
+    width: 4.3rem;
+    height: 4.3rem;
+    border-radius: 70%;
+    border: 1px solid rgb(32, 32, 3);
+    z-index: 995;
+}
+
+.theme:hover {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 900px) {
     .down {
         width: 3.1rem;
@@ -266,6 +304,13 @@ div.date  {
 
     .down span {
         font-size: 1.5rem;
+    }
+
+    .theme {
+        width: 3.1rem;
+        height: 3.1rem;
+        bottom: 1rem;
+        left: .5rem;
     }
 }
 

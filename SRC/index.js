@@ -45,8 +45,8 @@ document.addEventListener("click", (e) => {
             document.getElementById("countDown")
         );
     }
-    if (e.target.matches("#btnTheme")) {
-        identifyTheme();
+    if (e.target.matches("#btnTheme") || e.target.matches(`#btnTheme *`)) {
+      identifyTheme(document.getElementById("spanBtn"));
     }
 
 })
@@ -62,7 +62,6 @@ document.addEventListener("keydown", (e) => {
 
 document.addEventListener("DOMContentLoaded", (e) => {
     stylesDown();
-    identifyTheme();
 })
 
 

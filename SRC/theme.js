@@ -1,17 +1,13 @@
 
-export const identifyTheme = () => {
-  const userPrefersDark =
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  const userPrefersLight =
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: light)").matches;
-
-  if (userPrefersDark) {
-    console.log("User prefers a dark interface");
-  }
-  if (userPrefersLight) {
-    console.log("User prefers a light interface");
-  }
+export const identifyTheme = (spanBtn) => {
+  
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    //const theme = localStorage.getItem("theme");
+    if (prefersDarkScheme.matches) {
+      document.body.classList.toggle("light-theme");
+      spanBtn.innerHTML = "brightness_6";
+    } else {
+      document.body.classList.toggle("dark-theme");
+      spanBtn.innerHTML = "brightness_5";
+    }
 }
