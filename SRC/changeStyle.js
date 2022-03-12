@@ -9,3 +9,9 @@ export function addClassList (element, classe) {
 export function removeClassList (element, classe) {
     element.classList.remove(classe);    
 }
+
+export function changeClassListNode (element, classe) {
+    element.forEach((item) => {
+        item.classList.toggle(classe);    
+    })
+}

@@ -1,6 +1,6 @@
 import { addClassList, removeClassList } from './changeStyle.js';
 
-const DOM = document, WINDOW = window;
+export const DOM = document, WINDOW = window;
 
 
 export function stylesDown() {

@@ -6,12 +6,14 @@
     --font-family:'IBM Plex Sans Thai Looped',
     sans-serif;
     --color-text: #fff;
+    --background-div-dark: #333333;
 
 
     /* Theme Light */
 
     --background-body-light: #fcf9ee;
     --color-text-light: #141414;
+    --background-div-light: #e7d6c4;
 }
 
 
@@ -33,6 +35,14 @@ body.dark-theme {
     color: var(--color-text);
 }
 
+.dark-theme-others {
+    color: var(--color-text-light);
+}
+
+div.dark-background-others {
+    background-color: var(--background-div-dark);
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         background-color: var(--background-body);
@@ -41,6 +51,18 @@ body.dark-theme {
     body.light-theme {
         background-color: var(--background-body-light);
         color: var(--color-text-light);
+    }
+
+    .elements {
+        background-color: var(--background-div-dark);
+    }
+
+    div.light-background-others {
+        background-color: var(--background-div-light);
+    }
+
+    .light-theme-others {
+        color: var(--color-text);
     }
 }
 
@@ -148,6 +170,7 @@ ul.is-actives {
     max-width: 100%;
     text-align: center;
     height: 5%;
+    
 }
 
 /* Section 1 */
@@ -176,7 +199,6 @@ ul.is-actives {
     height: 15rem;
     text-align: center;
     border-radius: .3rem;
-    background-color: #333333;
 }
 
 @media screen and (max-width: 768px) {
