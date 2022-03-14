@@ -1,9 +1,6 @@
 import { DOM } from './updown.js';
 import { changeClassList, changeClassListNode } from "./changeStyle.js";
 
-
-
-
 export const identifyTheme = (spanBtn) => {
   
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)"),
@@ -12,7 +9,6 @@ export const identifyTheme = (spanBtn) => {
 
     const currentTheme = localStorage.getItem("theme");
     
-    //const theme = localStorage.getItem("theme");
     if (currentTheme === "dark") {
       changeThemeDark(spanBtn, selectorsWords, selectorsDiv);
     } else if (currentTheme === "light") {
