@@ -25,7 +25,7 @@ export const identifyTheme = (spanBtn) => {
         }
         else {
           changeThemeDark(spanBtn, selectorsWords, selectorsDiv);
-          theme = document.body.classList.contains("light-theme") ? "light" : "dark";
+          theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
         }
         localStorage.setItem("theme", theme);
       }

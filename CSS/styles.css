@@ -23,14 +23,13 @@ html, body {
     box-sizing: border-box;
     font-family: var(--font-family);
     scroll-behavior: smooth;
+    background-color: var(--background-body);
+    color: var(--color-text);
 }
 
 /* Theme Styles */
 
-body.dark-theme {
-    background-color: var(--background-body);
-    color: var(--color-text);
-}
+
 
 .dark-theme-others {
     color: var(--color-text-light);
@@ -52,24 +51,22 @@ div.light-background-others {
 .light-theme-others {
     color: var(--color-text);
 }
-@media (prefers-color-scheme: dark) {
+
+@media (prefers-color-scheme: ligth) {
     body {
+        background-color: var(--background-body-light);
+        color: var(--color-text-light);
+    }
+    .elements {
+        background-color: var(--background-div-light);
+    }
+
+    body.dark-theme {
         background-color: var(--background-body);
         color: var(--color-text);
     }
-    
-    .elements {
-        background-color: var(--background-div-dark);
-    }
-
 }
 
-
-@media (prefers-color-scheme: light) {
-    body {
-        background-color: var(--background-body-light);
-    }    
-}
 
 /* End Theme Styles */
 
@@ -206,6 +203,7 @@ ul.is-actives {
     height: 15rem;
     text-align: center;
     border-radius: .3rem;
+    background-color: var(--background-div-dark);
 }
 
 @media screen and (max-width: 768px) {
