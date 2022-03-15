@@ -3,7 +3,7 @@ import { changeClassList, changeClassListNode } from "./changeStyle.js";
 
 export const identifyTheme = (spanBtn) => {
   
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)"),
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: light)"),
       selectorsWords = DOM.querySelectorAll("[data-theme]"),
       selectorsDiv = DOM.querySelectorAll("[dataBack-theme]");
 
@@ -20,12 +20,14 @@ export const identifyTheme = (spanBtn) => {
       if (e.target.matches("#btnTheme") || e.target.matches(`#btnTheme *`)) {
         let theme = "";
         if (prefersDarkScheme.matches) {
-          changeThemeLight(spanBtn, selectorsWords, selectorsDiv);
-          theme = document.body.classList.contains("light-theme") ? "light" : "dark";
-        }
-        else {
           changeThemeDark(spanBtn, selectorsWords, selectorsDiv);
           theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
+        }
+        else {
+          changeThemeLight(spanBtn, selectorsWords, selectorsDiv);
+          theme = document.body.classList.contains("light-theme")
+            ? "light"
+            : "dark";
         }
         localStorage.setItem("theme", theme);
       }
