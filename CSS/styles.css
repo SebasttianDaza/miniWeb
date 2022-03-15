@@ -39,6 +39,19 @@ body.dark-theme {
 div.dark-background-others {
     background-color: var(--background-div-dark);
 }
+
+body.light-theme {
+    background-color: var(--background-body-light);
+    color: var(--color-text-light);
+}
+
+div.light-background-others {
+    background-color: var(--background-div-light);
+}
+
+.light-theme-others {
+    color: var(--color-text);
+}
 @media (prefers-color-scheme: dark) {
     body {
         background-color: var(--background-body);
@@ -48,26 +61,13 @@ div.dark-background-others {
     .elements {
         background-color: var(--background-div-dark);
     }
-    
-    body.light-theme {
-        background-color: var(--background-body-light);
-        color: var(--color-text-light);
-    }
-    
-    div.light-background-others {
-        background-color: var(--background-div-light);
-    }
-    
-    .light-theme-others {
-        color: var(--color-text);
-    }
+
 }
 
 
 @media (prefers-color-scheme: light) {
     body {
         background-color: var(--background-body-light);
-        color: var(--color-text-light);
     }    
 }
 
