@@ -2,21 +2,55 @@
     --color-main : #AC501F;
     --color-menu: #4C3949;
     --color-secondary: #AC501F;
-    --background-body: #1A1A1A;
     --font-family:'IBM Plex Sans Thai Looped',
     sans-serif;
-    --color-text: #fff;
-    --background-div-dark: #333333;
 
-    /* Theme Light */
-
-    --background-body-light: #fcf9ee;
-    --color-text-light: #141414;
-    --background-div-light: #e7d6c4;
 }
 
+/* Theme styles */
+
+@media(prefers-color-scheme: ligth) {
+    body {
+        --background-body: #fcf9ee;
+        --color-text: #141414;
+        --background-div: #e7d6c4;
+    }
+
+    
+    body.dark-theme {
+        --background-body: #1A1A1A;
+        --color-text: #fff;
+        --background-div: #333333;
+    }
+    
+    .dark-theme-others {
+        color: var(--color-text);
+    }
+    
+    div.dark-background-others {
+        background-color: var(--background-div);
+    }
+}
+body.light-theme {
+    --background-body: #fcf9ee;
+    --color-text: #141414;
+    --background-div: #e7d6c4;
+}
+
+div.light-background-others {
+    background-color: var(--background-div);
+}
+
+.light-theme-others {
+    color: var(--color-text);
+}
+
+/* End them styles */
 
 html, body {
+    --background-body: #1A1A1A;
+    --color-text: #fff;
+    --background-div: #333333;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -26,49 +60,6 @@ html, body {
     background-color: var(--background-body);
     color: var(--color-text);
 }
-
-/* Theme Styles */
-
-
-
-.dark-theme-others {
-    color: var(--color-text-light);
-}
-
-div.dark-background-others {
-    background-color: var(--background-div-dark);
-}
-
-body.light-theme {
-    background-color: var(--background-body-light);
-    color: var(--color-text-light);
-}
-
-div.light-background-others {
-    background-color: var(--background-div-light);
-}
-
-.light-theme-others {
-    color: var(--color-text);
-}
-
-@media (prefers-color-scheme: ligth) {
-    body {
-        background-color: var(--background-body-light);
-        color: var(--color-text-light);
-    }
-    .elements {
-        background-color: var(--background-div-light);
-    }
-
-    body.dark-theme {
-        background-color: var(--background-body);
-        color: var(--color-text);
-    }
-}
-
-
-/* End Theme Styles */
 
 img {
     max-width: 100%;
@@ -203,7 +194,7 @@ ul.is-actives {
     height: 15rem;
     text-align: center;
     border-radius: .3rem;
-    background-color: var(--background-div-dark);
+    background-color: var(--background-div);
 }
 
 @media screen and (max-width: 768px) {
