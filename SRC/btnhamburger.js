@@ -5,6 +5,7 @@ import { changeClassList, removeClassList } from "./changeStyle.js";
 export function changeMainStyle (e) {
     changeClassList(btn, "is-active");
     changeClassList(list, "is-actives");
+    changeClassList(document.body, "menu");
 }
 
 export function changeMainStyleLink (e) {
