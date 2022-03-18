@@ -11,4 +11,7 @@ export function changeMainStyle (e) {
 export function changeMainStyleLink (e) {
     removeClassList(btn, "is-active");
     removeClassList(list, "is-actives");
+    if (body.classList.contains("menu")) {
+        removeClassList(document.body, "menu");
+    }
 }
