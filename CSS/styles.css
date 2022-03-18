@@ -24,13 +24,17 @@
     }
     
     .dark-theme-others {
+        --color-text: #fff;
         color: var(--color-text);
     }
     
     div.dark-background-others {
+        --background-div: #333333;
         background-color: var(--background-div);
     }
 }
+
+
 body.light-theme {
     --background-body: #fcf9ee;
     --color-text: #141414;
@@ -38,14 +42,19 @@ body.light-theme {
 }
 
 div.light-background-others {
+    --background-div: #e7d6c4;
     background-color: var(--background-div);
 }
 
 .light-theme-others {
+    --color-text: #141414;
     color: var(--color-text);
 }
 
 /* End them styles */
+::-webkit-scrollbar {
+    display: none;
+}
 
 html, body {
     --background-body: #1A1A1A;
@@ -105,6 +114,8 @@ ul.is-actives {
     width: 100vw;
     height: 100vh;
     z-index: 998;
+    margin: 0;
+    overflow: clip;
     bottom: 0;
     top: 0;
     background-color: var(--color-menu);
