@@ -57,9 +57,7 @@ div.light-theme-others {
 }
 
 html, body {
-    --background-body: #1A1A1A;
-    --color-text: #fff;
-    --background-div: #333333;
+    
     width: 100%;
     padding: 0;
     margin: 0;
