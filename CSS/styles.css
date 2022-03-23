@@ -12,15 +12,14 @@
 body.dark-theme {
     --background-body: #1A1A1A;
     --color-text: #fff;
+    --background-div: #333333;
 }
 
-div.dark-theme-others {
-    --color-text: #fff;
+.dark-theme-others {
     color: var(--color-text);
 }
 
-div.dark-background-others {
-    --background-div: #333333;
+.dark-background-others {
     background-color: var(--background-div);
 }
 
@@ -35,21 +34,17 @@ div.dark-background-others {
     body.light-theme {
         --background-body: #fcf9ee;
         --color-text: #141414;
+        --background-div: #e7d6c4;
+    }
+
+    .light-background-others {
+        background-color: var(--background-div);
     }
     
+    .light-theme-others {
+        color: var(--color-text);
+    }
 }
-
-div.light-background-others {
-    --background-div: #e7d6c4;
-    background-color: var(--background-div);
-}
-
-div.light-theme-others {
-    --color-text: #141414;
-    color: var(--color-text);
-}
-
-
 
 /* End them styles */
 ::-webkit-scrollbar {
