@@ -1,5 +1,3 @@
-
-
 export const countDown = (date = undefined, element) => {
     let datesMs, limitDate, days, hours, minutes, seconds;
 

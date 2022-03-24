@@ -1,3 +1,4 @@
+import { responsiveResponsible } from './objectResposive.js';
 import { changeMainStyle, changeMainStyleLink } from './btnhamburger.js';
 import { startRelog, stopRelog, startAlarm, stopAlarm } from './relog-digital.js';
 import { startKeyBoard, shortcut } from './keyBoard.js';
@@ -9,6 +10,18 @@ const btn = document.getElementById("btn");
 const list = document.getElementById("menu");
 const div = document.querySelector(".hour");
 
+document.addEventListener("DOMContentLoaded", (e) => {
+    responsiveResponsible(
+      "contents",
+      "(max-width: 767px)",
+        "Esto es una prueba",
+      `<div id="background" >
+            <div id='elementBall' class="bull"></div>
+        </div>`
+    );
+    stylesDown();
+    identifyTheme(document.getElementById("spanBtn"));
+})
 
 document.addEventListener("click", (e) => {
     // Event the main button
@@ -33,16 +46,9 @@ document.addEventListener("click", (e) => {
     if(e.target.matches("#btnCountDown")) {
         
         countDown(
-            document.getElementById("Date").value,
-            document.getElementById("form"),
-            e
-        );
-    }
-    if (e.target.matches("#btnCountDown")) {
-        const value = document.getElementById("Date").value;
-        countDown(
-            new Date(value),
-            document.getElementById("countDown")
+          document.getElementById("Date").value,
+          document.getElementById("countDownTime"),
+          e
         );
     }
 
@@ -57,10 +63,6 @@ document.addEventListener("keydown", (e) => {
     );
 })
 
-document.addEventListener("DOMContentLoaded", (e) => {
-    stylesDown();
-    identifyTheme(document.getElementById("spanBtn"));
-})
 
 
 export { btn, list };

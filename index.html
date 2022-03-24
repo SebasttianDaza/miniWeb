@@ -7,6 +7,7 @@
     <title>Mini WebSite</title>
 
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/styleElements.css">
     <link href="dist/hamburger.css" rel="stylesheet">
     <link rel="shortcut icon" href="https://cdn2.iconfinder.com/data/icons/design-creativity-round/128/22-256.png" type="image/x-icon">
 
@@ -62,19 +63,18 @@
 
     <section id="second" class="tam">
         <h2 id="titleName" data-theme>Section Shortcut only keyBoard</h2>
-        <div id="background" >
-            <div id='elementBall' class="bull"></div>
-        </div>
+        <section id="contents" class="content"></section>
     </section>
 
     <section id="third" class="tam">
         <h2 data-theme>CountDown</h2>
         <form id="form">
-            <input type="datetime" name="Date" id="Date">
-            <input type="button" value="Programar 😎" id="btnCountDown">
+            <span class="material-icons">insert_invitation</span>
+            <input type="datetime" name="Date" id="Date" class="dateData" placeholder="Write to date">
+            <input type="button" value="Programar" id="btnCountDown" class="btn">
         </form>
         <div>
-            <h3 id="countDown" data-theme>Monday, 02:25:06 PM</h3>
+            <h3 id="countDownTime" data-theme>Monday, 02:25:06 PM</h3>
         </div>
     </section>
     
