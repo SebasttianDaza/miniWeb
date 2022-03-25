@@ -1,23 +1,19 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">Test Vue, Table API</h1>
+<h1 align="center">JavaScript Bom and Browser</h1>
 
 <div align="center">
   <h3>
-    <a href="https://{[your-demo-link.your-domain](https://vuetest-cf8a7.web.app/)}">
+    <a href="https://{[your-demo-link.your-domain](http://mini-web-ten.vercel.app/)}">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{[your-url-to-the-solution](https://github.com/SebasttianDaza/vueTest)}">
+    <a href="https://{[your-url-to-the-solution](https://github.com/SebasttianDaza/miniWeb)}">
       Solution
     </a>
     <span> | </span>
     <a href="https://emprendeyourlifestyle.com/portafolio/">
       Website
-    </a>
-    <span> | </span>
-    <a href="http://apitest.cargofive.com/api/ports">
-      API
     </a>
   </h3>
 </div>
@@ -30,38 +26,38 @@
 - [Overview](#overview)
   - [Built With](#built-with)
 - [How To Usea](#how-to-usea)
-- [Documentation](#documentation)
-    - [File Principal](#file-principal)
-    - [Folder Principal-](#folder-principal-)
-    - [Function Principal](#function-principal)
 - [Contact](#contact)
 
 <!-- OVERVIEW -->
 
 ## Overview
 
-![screenshot](https://firebasestorage.googleapis.com/v0/b/emprendeyourlifestyle.appspot.com/o/testVue.png?alt=media&token=df8e0daa-a9d3-4334-ad90-a2ba88d571c9)
+![screenshot](https://firebasestorage.googleapis.com/v0/b/deplacemaison-2f33d.appspot.com/o/miniWebb.png?alt=media&token=6049f2fb-154b-41ca-8223-b096d7549a26)
 
-Website developed with Vue.js and other techonologies, this project is a test where you paint data from API in a table with their differents records, it had as assumptions:
-- Connect to API for Endpoint 
-- Show results in a table with all data
-- The results should be paginated
-- And finally should have filters
+Website developed with JS Vanilla, CSS and another libraries. This small website I've allowed learn much about JS, more about concepts technique and the web. As:
+- Main hamburger with the library [hamburger-js](https://jonsuh.com/hamburgers/)
+- Relog Digital and Alarm
+- Events of keyboard (keydown, keyup, keypress), 
+- Colision Detection [Web](https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection)
+- Countdown Timer with Object Date
+- Button scroll with Object Window with event scroll
+- Change to theme Dark and Light with MatchMedia, JS, CSS and LocalStorage
+- MatchMedia for content responsable responsive.
 
-All this was accomplished and also added a search bar with the filters
 
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
-- [Vue 3](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup)
-- [Vite.js](https://vitejs.dev/)
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- [Firebase](https://firebase.google.com/)
-- [GitHub Actions](https://docs.github.com/en/actions)
-- [Vue Loading Overlay](https://github.com/ankurk91/vue-loading-overlay)
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
-- [Figma](https://www.figma.com/)
+- [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [hamburger-js](https://jonsuh.com/hamburgers/)
+- [KeyBoard Event](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent)
+- [Colision Detection](https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection)
+- [Object Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+- [Event Scroll](https://developer.mozilla.org/en-US/docs/Web/API/Document/scroll_event)
+- [MatchMedia](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia)
+- [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+- [Vercel](https://vercel.com/)
 
 
 
@@ -86,24 +82,6 @@ $ npm run build
 
 ```
 
-## Documentation
-
-#### File Principal 
-  - [JS](src/main.js) Implement the main App
-  - [Vue](src/App.vue) Main App and Implement all components and logic
-  - [HTML](index.html) Main HTML
-  - [Dist](dist/index.html) Implement all site compiled
-#### Folder Principal-
-  - [.firebase](.firebase/hosting.ZGlzdA.cache) It has files for the hosting
-  - [.github](.github/workflows/firebase-hosting-merge.yml) It has the logic to compilation and implement all the project to do push of repository.
-  - [src/components](src/components) It has all the components
-  - [src] It has all the files of Vue and JS
-
-#### Function Principal
-  -  [getData](src/components/info.vue) Get data from API
-  -  [nextPage](src/components/info.vue) Get next page with the results
-  -  [prevPage](src/components/info.vue) Get previous page with the results
-  -  [searchData](src/components/info.vue) Search data in the table depending on the type of filter
 
 ## Contact
 

@@ -3,8 +3,10 @@ import { changeMainStyle, changeMainStyleLink } from './btnhamburger.js';
 import { startRelog, stopRelog, startAlarm, stopAlarm } from './relog-digital.js';
 import { startKeyBoard, shortcut } from './keyBoard.js';
 import { countDown } from "./coutdown.js";
-import { stylesDown } from './updown.js';
+import { stylesDown, WINDOW } from './updown.js';
 import { identifyTheme } from './theme.js';
+import { ReusableElements } from "./Components/Reusable/Reusable.js";
+
 
 const btn = document.getElementById("btn");
 const list = document.getElementById("menu");
@@ -63,6 +65,7 @@ document.addEventListener("keydown", (e) => {
     );
 })
 
+WINDOW.customElements.define("reusable-elements", ReusableElements);
 
 
 export { btn, list };
