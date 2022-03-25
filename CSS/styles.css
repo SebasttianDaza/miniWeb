@@ -61,6 +61,7 @@ html, body {
     scroll-behavior: smooth;
     background-color: var(--background-body);
     color: var(--color-text);
+    
 }
 
 img {
@@ -171,6 +172,7 @@ body.menu {
     padding-top: 8vh;
     z-index: 0;
     color: var(--color-text);
+    overflow: clip;
 }
 
 .tam h2 {
@@ -300,6 +302,7 @@ div.date  {
     align-items: center;
     justify-items: center;
     padding: .5rem;
+    overflow: clip;
 }
 
 .dateData {
@@ -313,6 +316,7 @@ div.date  {
 }
 
 .content {
+    overflow: clip;
     display: flex;
     flex-direction: column;
     align-items: center;

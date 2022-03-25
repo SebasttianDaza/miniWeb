@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     responsiveResponsible(
       "contents",
       "(max-width: 767px)",
-        "Esto es una prueba",
+      `<reusable-elements information="This information" ></reusable-elements>`,
       `<div id="background" >
             <div id='elementBall' class="bull"></div>
         </div>`
