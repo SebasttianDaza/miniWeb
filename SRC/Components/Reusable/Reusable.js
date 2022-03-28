@@ -1,19 +1,25 @@
 export class ReusableElements extends HTMLElement {
     static get observedAttributes() {
-        return ["information"];
+        return ["information", "nameInformation", "nameTwo", "nameThree", "otherName"];
     }
 
     constructor() {
         super();
         this.information;
+        this.nameInformation;
+        this.nameTwo;
+        this.nameThree;
+        this.otherName;
     }
 
-    render(information) {
+    
+
+    render(information, nameInformation) {
         this.innerHTML = `
             <style>
                 .reusable-elements {
                     display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
                     width: 60vw;
                     height: 40vh;
                     grid-gap: 2rem;
@@ -24,6 +30,7 @@ export class ReusableElements extends HTMLElement {
                 }
 
                 @media screen and (max-width: 900px) {
+
                 }
             </style>
             <article class="reusable-elements">
@@ -33,9 +40,7 @@ export class ReusableElements extends HTMLElement {
                     </p>
                 </div>
                 <div>
-                    <p>
-                        this explication about this component
-                    </p>
+                    ${nameInformation}
                 </div>
             </article>
         
@@ -43,8 +48,9 @@ export class ReusableElements extends HTMLElement {
     }
 
     connectedCallback() {
-        this.render(this.information);
-
+        this.render(this.information, this.nameInformation);
+        console.log(this.informationValue);
+        console.log(this.nameInformation);
     }
 
     disconnectedCallback() {
@@ -56,6 +62,18 @@ export class ReusableElements extends HTMLElement {
         switch (name) {
             case "information":
                 this.information = newValue;
+                break;
+            case "nameInformation":
+                this.nameInformation = newValue;
+                break;
+            case "nameTwo":
+                this.nameTwo = newValue;
+                break;
+            case "nameThree":
+                this.nameThree = newValue;
+                break;
+            case "otherName":
+                this.otherName = newValue;
                 break;
         }
     }

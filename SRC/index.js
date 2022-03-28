@@ -1,4 +1,4 @@
-import { responsiveResponsible } from './objectResposive.js';
+import {responsiveResponsible, changeWebComponent} from "./objectResposive.js";
 import { changeMainStyle, changeMainStyleLink } from './btnhamburger.js';
 import { startRelog, stopRelog, startAlarm, stopAlarm } from './relog-digital.js';
 import { startKeyBoard, shortcut } from './keyBoard.js';
@@ -12,11 +12,20 @@ const btn = document.getElementById("btn");
 const list = document.getElementById("menu");
 const div = document.querySelector(".hour");
 
+
 document.addEventListener("DOMContentLoaded", (e) => {
+    changeWebComponent(
+      "four",
+      `<reusable-elements information="This information component" nameInformation="Window Scroll" nameTwo="Window" nameThree="Navigator"></reusable-elements>`
+    );
+    changeWebComponent(
+      "five",
+      `<reusable-elements information="Information theme" nameInformation="Window Scroll" nameTwo="Window" nameThree="Navigator"></reusable-elements>`
+    );
     responsiveResponsible(
       "contents",
       "(max-width: 767px)",
-      `<reusable-elements information="This information" ></reusable-elements>`,
+      `<reusable-elements information="This information"  nameInformation="Window Scroll" nameTwo="Window" nameThree="Navigator"></reusable-elements>`,
       `<div id="background" >
             <div id='elementBall' class="bull"></div>
         </div>`

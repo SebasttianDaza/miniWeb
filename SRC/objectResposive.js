@@ -17,3 +17,7 @@ export const responsiveResponsible = (idElement, mediaQuery, mobileContent, webC
     checkElement(breakpoint);
 };
 
+export const changeWebComponent = (idElement, webContent) => {
+    DOM.getElementById(idElement).insertAdjacentHTML('beforeend', webContent);
+};
+
