@@ -1,4 +1,5 @@
 import {responsiveResponsible, changeWebComponent} from "./objectResposive.js";
+import testForm from "./responsiveTester.js";
 import { changeMainStyle, changeMainStyleLink } from './btnhamburger.js';
 import { startRelog, stopRelog, startAlarm, stopAlarm } from './relog-digital.js';
 import { startKeyBoard, shortcut } from './keyBoard.js';
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     );
     stylesDown();
     identifyTheme(document.getElementById("spanBtn"));
+    testForm("formTester");
 })
 
 document.addEventListener("click", (e) => {

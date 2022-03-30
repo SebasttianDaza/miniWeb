@@ -43,6 +43,7 @@ Website developed with JS Vanilla, CSS and another libraries. This small website
 - Button scroll with Object Window with event scroll
 - Change to theme Dark and Light with MatchMedia, JS, CSS and LocalStorage
 - MatchMedia for content responsable responsive.
+- Web components only with JS Vanilla
 
 
 ### Built With

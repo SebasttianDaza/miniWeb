@@ -1,0 +1,31 @@
+@media screen and (max-width: 900px) {
+    .down {
+        width: 3.1rem;
+        height: 3.1rem;
+        right: calc(6rem + 1vw);
+    }
+
+    .down span {
+        font-size: 1.5rem;
+    }
+
+    .theme {
+        width: 3.1rem;
+        height: 3.1rem;
+        bottom: 1rem;
+        left: .5rem;
+    }
+
+    #form {
+        width: 100%;
+        padding: .1rem;
+    }
+
+    #btnCountDown {
+        width: 3.1rem;
+    }
+
+    .formTest {
+        width: 60vw;
+    }
+}

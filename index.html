@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="CSS/styleElements.css">
+    <link rel="stylesheet" href="CSS/responsive.css">
     <link href="dist/hamburger.css" rel="stylesheet">
     <link rel="shortcut icon" href="https://cdn2.iconfinder.com/data/icons/design-creativity-round/128/22-256.png" type="image/x-icon">
 
@@ -30,6 +31,7 @@
             <li><a class="menuLink" href="#third">CountDown</a></li>
             <li><a class="menuLink" href="#four">Button and Event Scroll</a></li>
             <li><a class="menuLink" href="#five">Theme Dark and Light</a></li>
+            <li><a class="menuLink" href="#six">Responsive Tester</a></li>
         </ul>
     </nav>
     <button id="btn" class="hamburger hamburger--spring " type="button">
@@ -71,7 +73,7 @@
         <form id="form">
             <span class="material-icons">insert_invitation</span>
             <input type="datetime" name="Date" id="Date" class="dateData" placeholder="Write to date">
-            <input type="button" value="Programar" id="btnCountDown" class="btn">
+            <input type="button" value="Add" id="btnCountDown" class="btn">
         </form>
         <div>
             <h3 id="countDownTime" data-theme>Monday, 02:25:06 PM</h3>
@@ -91,8 +93,35 @@
             <span id="spanBtn" class="material-icons">brightness_5</span>
         </div>
     </section>
+
+    <section id="six" class="tam">
+        <h2 data-theme>Form and Window</h2>
+        <form class="formTest" id="formTester">
+            <label for="url">Introduce the URL of a website</label>
+            <div class="formTestInput">
+                <span class="material-icons">link</span>
+                <input type="text" required placeholder="Introduce your text" required name="url" id="url">
+            </div>
+            <label for="width">Introduce the width</label>
+            <div class="formTestInput">
+                <span class="material-icons">width_full</span>
+                <input type="text" required placeholder="Introduce your text" required name="width" id="width">
+            </div>
+            <label for="height">Introduce the height</label>
+            <div class="formTestInput">
+                <span class="material-icons">height</span>
+                <input type="text" required placeholder="Introduce your text" required name="height" id="height">
+            </div>
+            <div class="ContentBtn">
+                <input type="submit" value="Test" class="btn">
+                <input type="button" value="Close" name="Close" class="btn">
+            </div>
+        </form>
+    </section>
     
-    
+    <section id="six" class="tam">
+        <h2 data-theme>Navigator and user Agent</h2>
+    </section>
     
     
 </body>
