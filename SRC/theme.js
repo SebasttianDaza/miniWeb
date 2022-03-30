@@ -15,8 +15,6 @@ export const identifyTheme = (spanBtn) => {
     } else if (currentTheme == "light") {
       changeThemeLight(spanBtn, selectorsWords, selectorsDiv);
     }
-    console.log(prefersDarkScheme);
-    console.log(currentTheme);
     DOM.addEventListener("click", (e) => {
       if (e.target.matches("#btnTheme") || e.target.matches(`#btnTheme *`)) {
         let theme = "";

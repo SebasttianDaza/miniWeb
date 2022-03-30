@@ -16,16 +16,16 @@ const div = document.querySelector(".hour");
 document.addEventListener("DOMContentLoaded", (e) => {
     changeWebComponent(
       "four",
-      `<reusable-elements information="This information component" nameInformation="Window Scroll" nameTwo="Window" nameThree="Navigator"></reusable-elements>`
+      `<reusable-elements information="This section show as work with Event Scroll and you can to make a button with funcionalitie climb to the initial part of the project and we also can to work with styles of the differents sections as Nav, you can to get more information about this." content="Window Event" morecontent="Event scroll" secondcontent="Scroll Y and Click"></reusable-elements>`
     );
     changeWebComponent(
       "five",
-      `<reusable-elements information="Information theme" nameInformation="Window Scroll" nameTwo="Window" nameThree="Navigator"></reusable-elements>`
+      `<reusable-elements information="This section I was working with a button to change Themes of the website, indefitying the theme about preferences of the device. It also have to save the theme you preference and finally we worked with styles and tags personalities." content="Match media" morecontent="Local storage" secondcontent="Styles and responsive"></reusable-elements>`
     );
     responsiveResponsible(
       "contents",
       "(max-width: 767px)",
-      `<reusable-elements information="This information"  nameInformation="Window Scroll" nameTwo="Window" nameThree="Navigator"></reusable-elements>`,
+      `<reusable-elements information="This section I was working with styles and collision detection, events keyboard to can move a ball in of a range. Only available for PC. Also It have short cuts as Shift, v to open Main and Alt + z to open window  " content="Collsion detection" morecontent="Event Keydown" secondcontent="getBoundingClientRect" ></reusable-elements>`,
       `<div id="background" >
             <div id='elementBall' class="bull"></div>
         </div>`
