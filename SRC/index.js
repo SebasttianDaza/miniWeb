@@ -1,5 +1,6 @@
 import {responsiveResponsible, changeWebComponent} from "./objectResposive.js";
 import testForm from "./responsiveTester.js";
+import userAgent from './userAgent.js';
 import { changeMainStyle, changeMainStyleLink } from './btnhamburger.js';
 import { startRelog, stopRelog, startAlarm, stopAlarm } from './relog-digital.js';
 import { startKeyBoard, shortcut } from './keyBoard.js';
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     stylesDown();
     identifyTheme(document.getElementById("spanBtn"));
     testForm("formTester");
+    userAgent("userAgent");
 })
 
 document.addEventListener("click", (e) => {
@@ -78,5 +80,6 @@ document.addEventListener("keydown", (e) => {
 
 WINDOW.customElements.define("reusable-elements", ReusableElements);
 
+const NAV = navigator;
 
-export { btn, list };
+export { btn, list, NAV };

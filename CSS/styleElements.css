@@ -84,3 +84,38 @@
     justify-items: center;
     grid-gap: 1rem;
 }
+
+/* User Agent */
+#six h2 {
+    margin: 0
+}
+
+#userAgent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 78vh;
+    justify-content: space-evenly;
+}
+
+.userAgent {
+    border: 2px solid var(--color-main);
+    border-radius: 5px;
+    padding: 1rem;
+    overflow: clip;
+    margin: 0 auto;
+}
+
+.userAgentString {
+    margin: 0;
+}
+
+.userAgentContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.userAgentChild h3 {
+    margin: 0;
+}
