@@ -1,4 +1,5 @@
 import {responsiveResponsible, changeWebComponent} from "./objectResposive.js";
+import connection from "./connection.js";
 import testForm from "./responsiveTester.js";
 import userAgent from './userAgent.js';
 import { changeMainStyle, changeMainStyleLink } from './btnhamburger.js';
@@ -36,6 +37,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     identifyTheme(document.getElementById("spanBtn"));
     testForm("formTester");
     userAgent("userAgent");
+    connection("connection");
 })
 
 document.addEventListener("click", (e) => {

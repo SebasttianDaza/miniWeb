@@ -1,4 +1,5 @@
 import { NAV } from './index.js';
+import { responsiveResponsible } from "./objectResposive.js";
 
 
 export default function userAgent (idElement) {
@@ -37,7 +38,7 @@ export default function userAgent (idElement) {
     let template = `
     <div class="userAgent">
         <div class="userAgentString">
-            <p>${userAgents.split("/(?=[A-Z])/")}</p>
+            <p id="contentUser">${userAgents.split("/(?=[A-Z])/")}</p>
         </div>
         <div class="userAgentContent">
             <div class="userAgentChild">
@@ -57,17 +58,24 @@ export default function userAgent (idElement) {
     $element.innerHTML = template;
 
     innerAboutBrowser(isBrowser, $element);
+    responsiveResponsible(
+      "contentUser",
+      "(max-width: 768px)",
+      //Cortar string a la mitad
+      `${userAgents.substring(0, userAgents.length / 1.3)}`,
+      `${userAgents.split("/(?=[A-Z])/")}`
+    );
 };
 
 
 function innerAboutBrowser(isBrowser, $element) {
-    if(isBrowser.Chrome() && isBrowser.Safari()) {
-        $element.innerHTML += `<reusable-elements information="This section only users the Chrome" content="Window Event" morecontent="Event scroll" secondcontent="Scroll Y and Click"></reusable-elements>`;
+    if(isBrowser.Chrome() || isBrowser.Safari()) {
+        $element.innerHTML += `<reusable-elements information="This section only users the Chrome" content="Navigator" morecontent="Event scroll" secondcontent="userAgent"></reusable-elements>`;
     }
     if(isBrowser.Firefox()) {
-        $element.innerHTML += `<reusable-elements information="This section only users the Firefox" content="Window Event" morecontent="Event scroll" secondcontent="Scroll Y and Click"></reusable-elements>`;
+        $element.innerHTML += `<reusable-elements information="This section only users the Firefox" content="Navigator" morecontent="Event scroll" secondcontent="userAgent"></reusable-elements>`;
     }
     if(isBrowser.Opera() || isBrowser.IE() || isBrowser.Edge()) {
-        $element.innerHTML += `<reusable-elements information="This section only users the Opera" content="Window Event" morecontent="Event scroll" secondcontent="Scroll Y and Click"></reusable-elements>`;
+        $element.innerHTML += `<reusable-elements information="This section only users the Opera" content="Navigator" morecontent="Event scroll" secondcontent="userAgent"></reusable-elements>`;
     }
 }

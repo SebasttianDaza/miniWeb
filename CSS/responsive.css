@@ -28,4 +28,16 @@
     .formTest {
         width: 60vw;
     }
+
+    #userAgent {
+        height: 85vh;
+    }
+
+    .userAgent {
+        width: 100%
+    }
+
+    #six h2 {
+        display: none;
+    }
 }
