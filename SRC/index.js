@@ -34,10 +34,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
         </div>`
     );
     stylesDown();
-    identifyTheme(document.getElementById("spanBtn"));
     testForm("formTester");
     userAgent("userAgent");
-    connection("connection");
+    identifyTheme(document.getElementById("spanBtn"));
 })
 
 document.addEventListener("click", (e) => {
@@ -80,6 +79,7 @@ document.addEventListener("keydown", (e) => {
     );
 })
 
+connection();
 WINDOW.customElements.define("reusable-elements", ReusableElements);
 
 const NAV = navigator;

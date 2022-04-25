@@ -8,7 +8,6 @@ export const identifyTheme = (spanBtn) => {
       selectorsDiv = DOM.querySelectorAll("[dataBack-theme]");
 
     const currentTheme = localStorage.getItem("theme");
-    console.log(currentTheme);
     
     if (currentTheme == "dark") {
       changeThemeDark(spanBtn, selectorsWords, selectorsDiv);
