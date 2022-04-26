@@ -9,6 +9,7 @@ import { startKeyBoard, shortcut } from './keyBoard.js';
 import { countDown } from "./coutdown.js";
 import { stylesDown} from './updown.js';
 import { identifyTheme } from './theme.js';
+import getUseMedia from "./APIs/getUserMedia.js";
 
 
 const DOM = document;
@@ -85,6 +86,7 @@ DOM.addEventListener("keydown", (e) => {
 
 
 connection();
+getUseMedia();
 
 
 export { btn, list, NAV };
