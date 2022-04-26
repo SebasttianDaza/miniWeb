@@ -1,3 +1,4 @@
+import ReusableElements from "./Components/Reusable/Reusable.js";
 import {responsiveResponsible, changeWebComponent} from "./objectResposive.js";
 import connection from "./connection.js";
 import testForm from "./responsiveTester.js";
@@ -6,17 +7,20 @@ import { changeMainStyle, changeMainStyleLink } from './btnhamburger.js';
 import { startRelog, stopRelog, startAlarm, stopAlarm } from './relog-digital.js';
 import { startKeyBoard, shortcut } from './keyBoard.js';
 import { countDown } from "./coutdown.js";
-import { stylesDown, WINDOW } from './updown.js';
+import { stylesDown} from './updown.js';
 import { identifyTheme } from './theme.js';
-import { ReusableElements } from "./Components/Reusable/Reusable.js";
 
 
-const btn = document.getElementById("btn");
-const list = document.getElementById("menu");
-const div = document.querySelector(".hour");
+const DOM = document;
+const NAV = navigator;
+const btn = DOM.getElementById("btn");
+const list = DOM.getElementById("menu");
+const div = DOM.querySelector(".hour");
+
+customElements.get("reusable-elements")  || customElements.define("reusable-elements", ReusableElements);
 
 
-document.addEventListener("DOMContentLoaded", (e) => {
+DOM.addEventListener("DOMContentLoaded", (e) => {
     changeWebComponent(
       "four",
       `<reusable-elements information="This section show as work with Event Scroll and you can to make a button with funcionalitie climb to the initial part of the project and we also can to work with styles of the differents sections as Nav, you can to get more information about this." content="Window Event" morecontent="Event scroll" secondcontent="Scroll Y and Click"></reusable-elements>`
@@ -33,13 +37,13 @@ document.addEventListener("DOMContentLoaded", (e) => {
             <div id='elementBall' class="bull"></div>
         </div>`
     );
+    identifyTheme(DOM.getElementById("spanBtn"));
     stylesDown();
     testForm("formTester");
     userAgent("userAgent");
-    identifyTheme(document.getElementById("spanBtn"));
 })
 
-document.addEventListener("click", (e) => {
+DOM.addEventListener("click", (e) => {
     // Event the main button
     if (e.target.matches("#btn") || e.target.matches(`#btn *`)) {
         changeMainStyle();
@@ -62,26 +66,25 @@ document.addEventListener("click", (e) => {
     if(e.target.matches("#btnCountDown")) {
         
         countDown(
-          document.getElementById("Date").value,
-          document.getElementById("countDownTime"),
+          DOM.getElementById("Date").value,
+          DOM.getElementById("countDownTime"),
           e
         );
     }
 
 })
 
-document.addEventListener("keydown", (e) => {
+DOM.addEventListener("keydown", (e) => {
     shortcut(e);
     startKeyBoard(
       e,
-      document.getElementById("background"),
-      document.querySelector("#elementBall")
+      DOM.getElementById("background"),
+      DOM.querySelector("#elementBall")
     );
 })
 
-connection();
-WINDOW.customElements.define("reusable-elements", ReusableElements);
 
-const NAV = navigator;
+connection();
+
 
 export { btn, list, NAV };

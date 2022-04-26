@@ -1,4 +1,4 @@
-export class ReusableElements extends HTMLElement {
+export default class ReusableElements extends HTMLElement {
     static get observedAttributes() {
         return ["information", "content", "morecontent", "secondcontent"];
     }

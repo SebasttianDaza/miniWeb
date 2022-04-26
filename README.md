@@ -44,6 +44,7 @@ Website developed with JS Vanilla, CSS and another libraries. This small website
 - Change to theme Dark and Light with MatchMedia, JS, CSS and LocalStorage
 - MatchMedia for content responsable responsive.
 - Web components only with JS Vanilla
+- Detection internet connection with [Web](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/onLine)
 
 
 ### Built With

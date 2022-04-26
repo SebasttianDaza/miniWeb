@@ -20,18 +20,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
       rel="stylesheet">
 
-    <!-- Notie -->
-
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/notie/dist/notie.min.css">
-    <style>
+      <link rel="stylesheet" type="text/css" href="https://unpkg.com/notie/dist/notie.min.css">
+  <style>
     /* override styles here */
-        .notie-container {
-             box-shadow: none;
-        }
-    </style>
+    .notie-container {
+      box-shadow: none;
+    }
+  </style>
 
-    <script type="module" src="SRC/index.js"></script>
-    <script defer src="https://unpkg.com/notie"></script>
 </head>
 <body>
     <nav id="navegation" class="navegations">
@@ -52,7 +48,7 @@
     </button>
 
 
-
+    
     
     <!-- Secciones Principales -->
     <section id="first" class="tam" >
@@ -68,8 +64,8 @@
             </div>
             <div class="elements" dataBack-theme>
                 <h3 data-theme>Alarm Digital</h3>
-                <button id="startAlarm"class="btn">Start Relog</button>
-                <button id="stopAlarm"class="btn">Stop Relog</button>
+                <button id="startAlarm" class="btn">Start Relog</button>
+                <button id="stopAlarm" class="btn">Stop Relog</button>
             </div>
         </aside>
     </section>
@@ -97,7 +93,7 @@
             <span class="material-icons">arrow_upward</span>
         </div>
     </section>
-
+    
     <section id="five" class="tam" >
         <h2 data-theme>Btn to change Theme Dark/Light</h2>
         <div id="btnTheme" class="theme">
@@ -111,17 +107,17 @@
             <label for="url">Introduce the URL of a website</label>
             <div class="formTestInput">
                 <span class="material-icons">link</span>
-                <input type="text" required placeholder="Introduce your text" required name="url" id="url">
+                <input type="text" placeholder="Introduce your text" required name="url" id="url">
             </div>
             <label for="width">Introduce the width</label>
             <div class="formTestInput">
                 <span class="material-icons">width_full</span>
-                <input type="text" required placeholder="Introduce your text" required name="width" id="width">
+                <input type="text" placeholder="Introduce your text" required name="width" id="width">
             </div>
             <label for="height">Introduce the height</label>
             <div class="formTestInput">
                 <span class="material-icons">height</span>
-                <input type="text" required placeholder="Introduce your text" required name="height" id="height">
+                <input type="text" placeholder="Introduce your text" required name="height" id="height">
             </div>
             <div class="ContentBtn">
                 <input type="submit" value="Test" class="btn">
@@ -134,7 +130,6 @@
         <h2 data-theme>Navigator and user Agent</h2>
         <section id="userAgent"></section>
     </section>
-    
-    
+    <script type="module" src="/SRC/index.js"></script>
 </body>
 </html>
