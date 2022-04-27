@@ -10,7 +10,7 @@ import { countDown } from "./coutdown.js";
 import { stylesDown} from './updown.js';
 import { identifyTheme } from './theme.js';
 import getUseMedia from "./APIs/getUserMedia.js";
-
+import getGeolocation from "./APIs/getGeolocation.js";
 
 const DOM = document;
 const NAV = navigator;
@@ -43,6 +43,7 @@ DOM.addEventListener("DOMContentLoaded", (e) => {
     testForm("formTester");
     userAgent("userAgent");
     getUseMedia("webcam", "getUserMedia");
+    getGeolocation("geolocation");
 })
 
 DOM.addEventListener("click", (e) => {

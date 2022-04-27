@@ -13,7 +13,7 @@ async function getUseMedia(constraints, content) {
         }
     } catch (e) {
         const $content = DOM.getElementById(content);
-        $content.innerHTML = `<reusable-elements information="${e}" content="${content}" morecontent="${constraints}" secondcontent="getUserMedia" ></reusable-elements>`;
+        $content.innerHTML = `<reusable-elements information="Sucedio el siguiente error : ${e}" content="${content}" morecontent="${constraints}" secondcontent="getUserMedia" ></reusable-elements>`;
     }
 }
 
