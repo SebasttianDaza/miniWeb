@@ -42,6 +42,7 @@ DOM.addEventListener("DOMContentLoaded", (e) => {
     stylesDown();
     testForm("formTester");
     userAgent("userAgent");
+    getUseMedia("webcam", "getUserMedia");
 })
 
 DOM.addEventListener("click", (e) => {
@@ -86,7 +87,7 @@ DOM.addEventListener("keydown", (e) => {
 
 
 connection();
-getUseMedia();
 
 
-export { btn, list, NAV };
+
+export { btn, list, NAV, DOM };
