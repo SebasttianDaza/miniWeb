@@ -13,6 +13,7 @@ import { identifyTheme } from './theme.js';
 import getUseMedia from "./APIs/getUserMedia.js";
 import getGeolocation from "./APIs/getGeolocation.js";
 import filterResults from "./filterResults.js";
+import digitalDraw from "./Functions/digitalDraw.js";       
 
 const DOM = document;
 const NAV = navigator;
@@ -76,6 +77,9 @@ DOM.addEventListener("click", (e) => {
           DOM.getElementById("countDownTime"),
           e
         );
+    }
+    if (e.target.matches("#random")) {
+      digitalDraw(DOM.querySelectorAll(".listDraw"));
     }
 
 })

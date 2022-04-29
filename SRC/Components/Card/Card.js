@@ -36,7 +36,7 @@ export default class Card extends HTMLElement {
             </style>
             <article class="Card">
                 <div class="CardImage">
-                    <img src="${this.image}" alt="">
+                    <img loading="lazy" src="${this.image}" alt="">
                 </div>
                 <div class="CardTitle">
                     <h3>${this.title}</h3>
