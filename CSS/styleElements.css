@@ -123,3 +123,27 @@
 .userAgentChild h3 {
     margin: 0;
 }
+
+#webStorage {
+    width: 100%;
+    height: 100% !important;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 1rem;
+}
+
+.filterform {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.filterform h2 {
+    margin-top: .5rem;
+    
+}
+
+#filter {
+    height: 2rem;
+}

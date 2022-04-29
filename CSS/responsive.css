@@ -41,3 +41,10 @@
         display: none;
     }
 }
+
+@media screen and (min-width: 768px) {
+    #webStorage {
+        min-height: 70%;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}

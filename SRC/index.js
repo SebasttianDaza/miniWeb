@@ -1,4 +1,5 @@
 import ReusableElements from "./Components/Reusable/Reusable.js";
+import Card from "./Components/Card/Card.js";
 import {responsiveResponsible, changeWebComponent} from "./objectResposive.js";
 import connection from "./connection.js";
 import testForm from "./responsiveTester.js";
@@ -11,6 +12,7 @@ import { stylesDown} from './updown.js';
 import { identifyTheme } from './theme.js';
 import getUseMedia from "./APIs/getUserMedia.js";
 import getGeolocation from "./APIs/getGeolocation.js";
+import filterResults from "./filterResults.js";
 
 const DOM = document;
 const NAV = navigator;
@@ -20,6 +22,7 @@ const div = DOM.querySelector(".hour");
 
 customElements.get("reusable-elements")  || customElements.define("reusable-elements", ReusableElements);
 
+customElements.get("component-card")  || customElements.define("component-card", Card);
 
 DOM.addEventListener("DOMContentLoaded", (e) => {
     changeWebComponent(
@@ -88,7 +91,7 @@ DOM.addEventListener("keydown", (e) => {
 
 
 connection();
-
+filterResults(".Card");
 
 
 export { btn, list, NAV, DOM };

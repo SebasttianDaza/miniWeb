@@ -325,6 +325,13 @@ div.date  {
     width: 100%;
 }
 
+.filter {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+    order: 1;
+}
+
 
 
 
