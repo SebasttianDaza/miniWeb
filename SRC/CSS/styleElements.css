@@ -147,3 +147,61 @@
 #filter {
     height: 2rem;
 }
+
+/* Slider */
+
+.slider {
+    position: relative;
+    width: 18rem;
+    height: 70%;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.slider-slides {
+    position: relative;
+    height: 20rem;
+}
+
+.slider-slide {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-in-out;
+}
+
+.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.slider-btns {
+    display: flex;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.slider-btns a {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--color-main);
+    color: var(--color-text);
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color .5s ease-in-out;
+}
+
+.slider-btns a:hover {
+    background-color: var(--color-text);
+    color: var(--color-main);
+}

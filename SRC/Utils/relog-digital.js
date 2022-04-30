@@ -1,4 +1,4 @@
- 
+import { DOM } from "../index.js"; 
 // Function for relog
 export  function startRelog (div, e) {
     interval(div);
@@ -23,8 +23,8 @@ const interval = (div) => {
 export function stopRelog (div) {
     clearInterval(valorInterval);
     div.innerHTML = "";
-    document.getElementById("start").disabled = false;
-    document.getElementById("start").innerHTML = "Start Relog";
+    DOM.getElementById("start").disabled = false;
+    DOM.getElementById("start").innerHTML = "Start Relog";
 }   
 
 //Function for alarm

@@ -1,4 +1,4 @@
-import { addClassList, removeClassList } from './changeStyle.js';
+import { addClassList, removeClassList } from './Utils/changeStyle.js';
 
 export const DOM = document
 export const WINDOW = window;

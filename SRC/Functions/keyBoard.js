@@ -34,7 +34,7 @@ export function startKeyBoard (e, game,  elementBall) {
 
 }
 
-export const numberEnter = (element) => {
+const numberEnter = (element) => {
   const { left, right, top, bottom } = element.getBoundingClientRect();
   Math.round(left);
   Math.round(right);
@@ -54,7 +54,6 @@ export const shortcut = (e) => {
     alert("Hola mundo");
   }
 }
-
 
 function changeName () {
     const name = prompt("Ingrese su nombre");
