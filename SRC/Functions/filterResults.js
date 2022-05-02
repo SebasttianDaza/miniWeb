@@ -1,4 +1,4 @@
-import { DOM } from "./index.js";
+import { DOM } from "../index.js";
 
 const filterResults = (card) => {
     const $content = DOM.querySelectorAll(card)

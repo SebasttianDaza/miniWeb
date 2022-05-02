@@ -1,4 +1,4 @@
-import { WINDOW } from "../updown";
+import { WINDOW } from "../index.js";
 
 const digitalDraw = (list) => {
     const random = Math.floor(Math.random() * list.length);

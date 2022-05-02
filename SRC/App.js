@@ -4,6 +4,7 @@ import { countDown } from "./Functions/coutdown.js";
 import digitalDraw from "./Functions/digitalDraw.js";
 import { startKeyBoard, shortcut } from "./Functions/keyBoard.js";
 
+
 const div = document.querySelector(".hour");
 
 document.addEventListener("click", (e) => {
@@ -46,4 +47,3 @@ document.addEventListener("keydown", (e) => {
     document.querySelector("#elementBall")
   );
 });
- 

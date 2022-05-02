@@ -1,5 +1,5 @@
-import { NAV } from './index.js';
-import { responsiveResponsible } from "./objectResposive.js";
+import { NAV } from '../index.js';
+import { responsiveResponsible } from "../Utils/objectResposive.js";
 
 
 export default function userAgent (idElement) {

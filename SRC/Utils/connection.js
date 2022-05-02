@@ -1,5 +1,4 @@
-import { NAV } from "./index.js";
-import { WINDOW } from "./updown.js";
+import { NAV, WINDOW } from "../index.js";
 import notie from "notie";
 
 export default function connection() {

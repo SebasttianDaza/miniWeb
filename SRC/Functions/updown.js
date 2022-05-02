@@ -1,7 +1,5 @@
-import { addClassList, removeClassList } from './Utils/changeStyle.js';
-
-export const DOM = document
-export const WINDOW = window;
+import { addClassList, removeClassList } from '../Utils/changeStyle.js';
+import { DOM , WINDOW} from '../index.js';
 
 
 export function stylesDown() {

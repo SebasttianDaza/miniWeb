@@ -1,16 +1,16 @@
 import "./App.js";
 import ReusableElements from "./Components/Reusable/Reusable.js";
 import Card from "./Components/Card/Card.js";
-import {responsiveResponsible, changeWebComponent} from "./objectResposive.js";
-import connection from "./connection.js";
-import testForm from "./responsiveTester.js";
-import userAgent from './userAgent.js';
-import { stylesDown} from './updown.js';
-import { identifyTheme } from './theme.js';
+import {responsiveResponsible, changeWebComponent} from "./Utils/objectResposive.js";
+import testForm from "./Functions/responsiveTester.js";
+import userAgent from './Functions/userAgent.js';
+import { stylesDown} from './Functions/updown.js';
+import { identifyTheme } from './Functions/theme.js';
 import getUseMedia from "./APIs/getUserMedia.js";
 import getGeolocation from "./APIs/getGeolocation.js";
-import filterResults from "./filterResults.js";
-import handleSlider from "./Functions/slider.js";       
+import handleSlider from "./Functions/slider.js";     
+import filterResults from "./Functions/filterResults.js";  
+import connection from "./Utils/connection.js";
 
 const DOM = document, NAV = navigator, WINDOW = window;
 const btn = DOM.getElementById("btn");
@@ -50,4 +50,4 @@ DOM.addEventListener("DOMContentLoaded", (e) => {
 connection();
 filterResults(".Card");
 
-export { btn, list, NAV, DOM };
+export { btn, list, NAV, DOM, WINDOW };

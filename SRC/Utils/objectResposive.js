@@ -1,4 +1,4 @@
-import {DOM, WINDOW} from './updown.js';
+import {DOM, WINDOW} from '../index.js';
 
 
 export const responsiveResponsible = (idElement, mediaQuery, mobileContent, webContent) => {

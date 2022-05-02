@@ -1,5 +1,5 @@
-import { DOM } from './updown.js';
-import { changeClassList, changeClassListNode } from "./Utils/changeStyle.js";
+import { DOM } from '../index.js';
+import { changeClassList, changeClassListNode } from "../Utils/changeStyle.js";
 
 export const identifyTheme = (spanBtn) => {
   
