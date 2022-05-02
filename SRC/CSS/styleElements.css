@@ -16,25 +16,9 @@
     transition: opacity 0.5s ease-in-out;
 }
 
-.theme {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    position: fixed;
-    bottom: 1.5rem;
-    left: 1.5rem;
-    background-color: var(--color-main);
-    width: 4.3rem;
-    height: 4.3rem;
-    border-radius: 70%;
-    border: 1px solid rgb(32, 32, 3);
-    z-index: 995;
-}
-
 .theme:hover {
-    cursor: pointer;
-}
+        cursor: pointer;
+ }
 
 
 .formTest {

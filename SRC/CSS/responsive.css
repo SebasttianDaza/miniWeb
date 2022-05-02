@@ -42,9 +42,101 @@
     }
 }
 
+@media screen and (max-width: 899px) {
+    .list {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 998;
+    margin: 0;
+    padding: 0;
+    overflow: clip;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-menu);
+    transition: transform 0.5s ease-in-out;
+    transform: translate(-110%, 0);
+    }
+    
+    .theme {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        position: fixed;
+        bottom: 1.5rem;
+        left: 1.5rem;
+        background-color: var(--color-main);
+        width: 4.3rem;
+        height: 4.3rem;
+        border-radius: 70%;
+        border: 1px solid rgb(32, 32, 3);
+        z-index: 995;
+    }
+
+    
+}
+
 @media screen and (min-width: 768px) {
     #webStorage {
         min-height: 70%;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media screen and (min-width: 900px) {
+    html, body  {
+        width: 80vw;
+        position: absolute;
+        right: 0;
+    }
+
+    .list {
+        z-index: 998;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        position: fixed;
+        transform: translateX(0);
+        width: 20vw;
+        height: 100vh;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        overflow-y: scroll;
+        background-color: var(--color-menu);
+    }
+
+    .list li {
+        font-size: 1rem;
+    }
+
+    .theme {
+        justify-content: space-evenly;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        background-color: var(--color-main);
+        width: 4.3rem;
+        height: 4.3rem;
+        border-radius: 70%;
+        border: 1px solid rgb(32, 32, 3);
+        z-index: 995;
+    }
+
+    #btn {
+        display: none;
     }
 }

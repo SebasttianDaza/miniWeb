@@ -1,3 +1,4 @@
+
 :root {
     --color-main : #AC501F;
     --color-menu: #4C3949;
@@ -103,26 +104,7 @@ body.menu {
 
 /* Menu */
 
-.list {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-items: center;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    z-index: 998;
-    margin: 0;
-    padding: 0;
-    overflow: clip;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--color-menu);
-    transition: transform 0.5s ease-in-out;
-    transform: translate(-110%, 0);
-}
+
 
 .list li {
     display: flex;
