@@ -12,6 +12,9 @@ import handleSlider from "./Functions/slider.js";
 import filterResults from "./Functions/filterResults.js";  
 import connection from "./Utils/connection.js";
 import ScrollSpy from "./Services/intersectionObserver.js";
+import handleVideo from "./Services/videoIntelligent.js";
+import handleVisibilityPage from "./Services/pageVisibility.js";
+
 const DOM = document, NAV = navigator, WINDOW = window;
 const btn = DOM.getElementById("btn");
 const list = DOM.getElementById("menu");
@@ -46,6 +49,8 @@ DOM.addEventListener("DOMContentLoaded", (e) => {
     getGeolocation("geolocation");
     handleSlider(); 
     ScrollSpy();
+    handleVideo();
+    handleVisibilityPage();
 })
 
 connection();

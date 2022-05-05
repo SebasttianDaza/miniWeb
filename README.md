@@ -45,6 +45,8 @@ Website developed with JS Vanilla, CSS and another libraries. This small website
 - MatchMedia for content responsable responsive.
 - Web components only with JS Vanilla
 - Detection internet connection with [Web](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/onLine)
+- Intersection Observer with [Web](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
+- API Page Visibility with [Web](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API)
 
 
 ### Built With
