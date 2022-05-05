@@ -119,7 +119,7 @@ body.menu {
     
 }
 
-.list li:hover {
+.list li:hover, .is-actives {
     background-color: var(--color-main);
     color: rgb(32, 32, 3);
     transition: background-color 1s ease;
