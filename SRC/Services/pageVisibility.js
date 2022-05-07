@@ -1,6 +1,6 @@
-import { DOM } from "../index.js";
+import { DOM, WINDOW } from "../index.js";
 
-const handleVisibilityPage = () => {
+const handleVisibilityPage = (handleVideo) => {
     let hidden, visibilityChange;
 
     if (typeof document.hidden !== "undefined") {
@@ -14,23 +14,11 @@ const handleVisibilityPage = () => {
         visibilityChange = "webkitvisibilitychange";
     }
 
-    const $videos = DOM.querySelectorAll(".video");
-
-    const handleVideo = () => {
-        if (document[hidden]) {
-            $videos.forEach(($video) => {
-                $video.pause();
-                $video.currentTime = 0;
-                $video.muted = true;
-                console.log("video paused");
-            });
-        }
-    }
 
     if (typeof document.addEventListener === "undefined" || typeof document[hidden] === "undefined") {
         return;
     } else {
-        document.addEventListener(visibilityChange, handleVideo, false);
+        WINDOW.addEventListener(visibilityChange, handleVideo, false);
     }
 }
 

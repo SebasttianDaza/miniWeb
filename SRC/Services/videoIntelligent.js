@@ -1,4 +1,5 @@
 import { DOM } from "../index.js";
+import handleVisibilityPage from "./pageVisibility.js";
 
 const handleVideo = () => {
     const $videos = DOM.querySelectorAll(".video");
@@ -20,7 +21,13 @@ const handleVideo = () => {
                 entry.target.play();
                 entry.target.muted = false;
             }
+            const handleVideo = (e) => {
+                DOM.visibilityState === "visible" ? entry.target.play() : entry.target.pause();
+            }
+    
+            handleVisibilityPage(handleVideo);
         })
+
     }
 
 
