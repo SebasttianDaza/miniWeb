@@ -218,11 +218,11 @@
             <form action="" id="formContact">
                 <div class="form-group">
                     <label id="label" for="name">You've to write your name</label>
-                    <input type="text"  placeholder="You write here!" name="name" id="name" required>
+                    <input type="text"  placeholder="You write here!" name="name" id="name" title="This name is only words and space on white" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
                 </div>
                 <div class="form-group">
                     <label id="label" for="email">You've to write your email</label>
-                    <input type="email" placeholder="You write here!"  name="email" id="email" required>
+                    <input type="email" placeholder="You write here!"  name="email" id="email" title="This email has characters@" pattern=" ^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
                 </div>
                 <div class="form-group">
                     <label id="label" for="">You've to write your issue</label>
@@ -230,10 +230,13 @@
                 </div>
                 <div class="form-group">
                     <label id="label" for="comment">Comments here</label>
-                    <textarea name="comment" id="comment" cols="30" rows="10" required></textarea>
+                    <textarea name="comment" id="comment" cols="30" rows="10" title="Not more to 1000" data-pattern="^.{1,255}$" required></textarea>
                 </div>
                 <input type="submit" id="btnSubmit" value="Enviar">
             </form>
+        </div>
+        <div class="loader">
+            <img src="/Public/Image/loader.svg" alt="">
         </div>
     </section>
     <script type="module" src="/SRC/index.js"></script>
