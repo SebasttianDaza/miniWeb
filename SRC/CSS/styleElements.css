@@ -258,3 +258,36 @@
 .form-group [required]:invalid {
     border: thin solid #ff0000;
 }
+
+.contact-form-error {
+    margin-top: -.1rem;
+    font-size: 80%;
+    color: #fff;
+    background-color: #ff0000;
+    transition: all 800ms ease;
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+}
+
+.contact-form-error.is-visible {
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none {
+    display: none;
+}
+
+
+@keyframes show-message {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}

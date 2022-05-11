@@ -13,6 +13,7 @@ import filterResults from "./Functions/filterResults.js";
 import connection from "./Utils/connection.js";
 import ScrollSpy from "./Services/intersectionObserver.js";
 import handleVideo from "./Services/videoIntelligent.js";
+import handleForm from "./Services/handleForm.js";
 
 
 const DOM = document, NAV = navigator, WINDOW = window;
@@ -50,6 +51,7 @@ DOM.addEventListener("DOMContentLoaded", (e) => {
     handleSlider(); 
     ScrollSpy();
     handleVideo();
+    handleForm();
 })
 
 connection();
