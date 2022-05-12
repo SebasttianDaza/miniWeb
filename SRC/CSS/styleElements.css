@@ -247,7 +247,9 @@
     cursor: pointer;
 }
 
-.loader {
+
+
+.none {
     display: none;
 }
 

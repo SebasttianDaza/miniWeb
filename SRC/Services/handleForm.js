@@ -44,6 +44,25 @@ const handleForm = () => {
 
         }
     })
+
+    sentForm($form);
+}
+
+const sentForm = ($form) => {
+    DOM.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const $loader = DOM.querySelector(".loader");
+         
+        $form.classList.add("none");
+        $loader.classList.remove("none");
+
+        setTimeout(() => {
+            $loader.classList.add("none");
+        }, 3000)
+        
+        $form.classList.remove("none");
+        $form.reset();
+    })
 }
 
 
