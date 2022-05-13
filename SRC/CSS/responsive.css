@@ -41,6 +41,10 @@
     #six h2 {
         display: none;
     }
+
+    #filterTitle {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 899px) {
