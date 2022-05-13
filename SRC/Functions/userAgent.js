@@ -62,7 +62,7 @@ export default function userAgent (idElement) {
       "contentUser",
       "(max-width: 768px)",
       //Cortar string a la mitad
-      `${userAgents.substring(0, userAgents.length / 1.3)}`,
+      `${userAgents.substring(0, userAgents.length / 1.2)}`,
       `${userAgents.split("/(?=[A-Z])/")}`
     );
 };

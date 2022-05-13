@@ -81,6 +81,7 @@
     justify-content: center;
     height: 78vh;
     justify-content: space-between;
+    overflow: clip;
 }
 
 .userAgent {
@@ -90,11 +91,13 @@
     overflow: clip;
     margin: 0 auto;
     width: 90%;
+    word-wrap: break-word;
 }
 
 .userAgentString, .userAgentString p {
     margin: 0;
     padding: 0;
+    word-wrap: break-word;
 }
 
 
