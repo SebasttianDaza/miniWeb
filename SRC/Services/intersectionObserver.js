@@ -11,22 +11,25 @@ const ScrollSpy = () => {
     const showHide = (entries) => {
         entries.forEach((entry) => {
             const id = entry.target.getAttribute("id");
-          if (entry.isIntersecting) {
-            //Su elemento padre aplica la clase
-            DOM.querySelector(`li[data-scroll-spy][id="#${id}"]`)
-            .classList.add("is-actives");
-            
-            DOM.querySelector(
-              `a[data-scroll-spy][href="#${id}"]`
-            ).classList.add("is-actives");
-            
-          } else {
-            DOM.querySelector(`li[data-scroll-spy][id="#${id}"]`)
-            .classList.remove("is-actives");
+          if(entry !== null) {
+            if (entry.isIntersecting) {
+              //Su elemento padre aplica la clase
+              DOM.querySelector(
+                `li[data-scroll-spy][id="#${id}"]`
+              ).classList.add("is-actives");
 
-            DOM.querySelector(
-              `a[data-scroll-spy][href="#${id}"]`
-            ).classList.remove("is-actives");
+              DOM.querySelector(
+                `a[data-scroll-spy][href="#${id}"]`
+              ).classList.add("is-actives");
+            } else {
+              DOM.querySelector(
+                `li[data-scroll-spy][id="#${id}"]`
+              ).classList.remove("is-actives");
+
+              DOM.querySelector(
+                `a[data-scroll-spy][href="#${id}"]`
+              ).classList.remove("is-actives");
+            }
           }
         });
     }
