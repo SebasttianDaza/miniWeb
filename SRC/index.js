@@ -14,6 +14,7 @@ import connection from "./Utils/connection.js";
 import ScrollSpy from "./Services/intersectionObserver.js";
 import handleVideo from "./Services/videoIntelligent.js";
 import handleForm from "./Services/handleForm.js";
+import speechApi from "./Services/speechApi.js";
 
 
 const DOM = document, NAV = navigator, WINDOW = window;
@@ -52,10 +53,11 @@ DOM.addEventListener("DOMContentLoaded", (e) => {
     ScrollSpy();
     handleVideo();
     handleForm();
-})
-
+  })
+  
 connection();
 filterResults(".Card");
+speechApi();
 
 
 export { btn, list, NAV, DOM, WINDOW };
